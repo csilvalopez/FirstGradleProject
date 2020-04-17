@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 public class BasePage {
 
@@ -15,8 +16,20 @@ public class BasePage {
     public BasePage(WebDriver pDriver, By localizador) {
         wait = new WebDriverWait(pDriver, 10);
         driver = pDriver;
-        waitUntilPresentByLocalizador(localizador, pDriver);
-        PageFactory.initElements(pDriver, this);
+
+        try {
+            waitUntilPresentByLocalizador(localizador, pDriver);
+            PageFactory.initElements(pDriver, this);
+        }
+        catch(Exception e) {
+            Reporter.log("no pudo inicializar",true);
+        }
+
+
+    }
+
+    public WebDriver getDriver() {
+        return driver;
     }
 
     public boolean presenceOfWebElement(By element){
@@ -24,12 +37,8 @@ public class BasePage {
         return (ExpectedConditions.presenceOfElementLocated(element)!=null);
     }
 
-
-
     public static WebElement waitUntilPresentByLocalizador(By localizador, WebDriver driver){
         return (new WebDriverWait(driver, 30)).until(ExpectedConditions.presenceOfElementLocated(localizador));
     }
-
-
 
 }
