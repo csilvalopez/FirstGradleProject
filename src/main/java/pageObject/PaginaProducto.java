@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.Reporter;
+
 import java.util.List;
 
 public class PaginaProducto extends BasePage{
@@ -19,11 +21,28 @@ public class PaginaProducto extends BasePage{
         super(driver, By.cssSelector("#productInfo"));
     }
 
-    public List<WebElement> getPriceList() {
-        return priceList;
+    public List<String> getProductoInfo (){
+
+        Reporter.log("Oferta Semanal: ");
+
+        List<String> infoProductoSemanal = null;
+
+        Reporter.log(itemName.getText());
+        Reporter.log(priceList.get(0).getText());
+        Reporter.log(priceList.get(1).getText());
+
+        infoProductoSemanal.add(itemName.getText());
+        infoProductoSemanal.add(priceList.get(0).getText());
+        infoProductoSemanal.add(priceList.get(1).getText());
+
+        return infoProductoSemanal;
     }
 
-    public WebElement getItemName() {
-        return itemName;
-    }
+//    public List<WebElement> getPriceList() {
+//        return priceList;
+//    }
+//
+//    public WebElement getItemName() {
+//        return itemName;
+//    }
 }

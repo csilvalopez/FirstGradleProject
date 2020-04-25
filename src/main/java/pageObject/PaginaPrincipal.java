@@ -16,12 +16,12 @@ public class PaginaPrincipal extends BasePage {
         super(driver, By.cssSelector("a[href='https://ofertas.mercadolibre.com.uy/ofertas-de-la-semana#nav-header']"));
     }
 
-    public OfertaSemanale getOfertaSemanalPage (){
+    public OfertaSemanal getOfertaSemanalPage (){
 
         JavascriptExecutor executor = (JavascriptExecutor)getDriver();
         executor.executeScript("arguments[0].click();", ofertasSemanales);
 
-        return new OfertaSemanale(getDriver());
+        return new OfertaSemanal(getDriver());
     }
 
 }

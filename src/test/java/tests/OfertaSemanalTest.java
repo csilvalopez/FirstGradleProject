@@ -5,7 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Reporter;
 import org.testng.annotations.*;
-import pageObject.OfertaSemanale;
+import org.testng.asserts.SoftAssert;
+import pageObject.OfertaSemanal;
 import pageObject.PaginaPrincipal;
 import pageObject.PaginaProducto;
 
@@ -26,17 +27,14 @@ public class OfertaSemanalTest{
 
         PaginaPrincipal paginaPrincipal = new PaginaPrincipal(driver);
         paginaPrincipal.getOfertaSemanalPage();
-        OfertaSemanale ofertaSemanale = new OfertaSemanale(driver);
-        ofertaSemanale.getPaginaProducto();
+        OfertaSemanal ofertaSemanal = new OfertaSemanal(driver);
+        ofertaSemanal.getPaginaProducto();
         PaginaProducto paginaProducto = new PaginaProducto(driver);
 
-        Reporter.log(ofertaSemanale.getNombreItemList().get(0).getText(), true);
-        Reporter.log(paginaProducto.getItemName().getText(), true);
-
-//        SoftAssert softAssert = new SoftAssert();
-//        softAssert.assertEquals(ofertaSemanale.getNombreItemList().get(0).getText(), paginaProducto.getItemName().getText());
-
-       // Assert.assertEquals();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(ofertaSemanal.getProductInfo().get(0), paginaProducto.getProductoInfo().get(0));
+        softAssert.assertEquals(ofertaSemanal.getProductInfo().get(1), paginaProducto.getProductoInfo().get(1));
+        softAssert.assertEquals(ofertaSemanal.getProductInfo().get(2), paginaProducto.getProductoInfo().get(2));
 
     }
 

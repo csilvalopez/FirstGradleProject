@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.OfertaSemanalTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-04-17T04:49:29" hostname="LAPTOP-FMKDBRLR" time="4.978">
+<testsuite name="tests.OfertaSemanalTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-04-25T19:18:25" hostname="LAPTOP-FMKDBRLR" time="4.043">
   <properties/>
-  <testcase name="openBrowser" classname="tests.OfertaSemanalTest" time="4.978">
-    <failure message="java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at com.sun.proxy.$Proxy16.get(Unknown Source)
-	at tests.OfertaSemanalTest.openBrowser(OfertaSemanalTest.java:37)
+  <testcase name="openBrowser" classname="tests.OfertaSemanalTest" time="4.043">
+    <failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;span.main-title&quot;}&#10;  (Session info: chrome=81.0.4044.122)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-FMKDBRLR', ip: '192.168.1.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\CAMILA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64923}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 145d23b1a2d2a87201a31cf79a40bacc&#10;*** Element info: {Using=css selector, value=span.main-title}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;span.main-title&quot;}
+  (Session info: chrome=81.0.4044.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-FMKDBRLR', ip: '192.168.1.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\CAMILA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64923}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 145d23b1a2d2a87201a31cf79a40bacc
+*** Element info: {Using=css selector, value=span.main-title}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.getText(Unknown Source)
+	at pageObject.OfertaSemanal.getProductInfo(OfertaSemanal.java:42)
+	at tests.OfertaSemanalTest.openBrowser(OfertaSemanalTest.java:36)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -74,14 +89,30 @@
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 22292
+Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 36936
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Apr 17, 2020 1:49:26 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Apr 25, 2020 4:18:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[1587098967.898][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587098968.551][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587098968.653][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587098968.760][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842302.789][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842302.892][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842302.994][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842303.096][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842303.744][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842303.845][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842303.949][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842304.052][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842304.154][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842304.255][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842304.445][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842304.548][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842304.649][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842304.752][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842304.855][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842304.959][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842305.063][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842305.165][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842305.269][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587842305.372][SEVERE]: Timed out receiving message from renderer: 0.100
 ]]></system-err>
 </testsuite>
