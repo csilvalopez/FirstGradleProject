@@ -24,8 +24,6 @@ public class BasePage {
         catch(Exception e) {
             Reporter.log("no pudo inicializar",true);
         }
-
-
     }
 
     public WebDriver getDriver() {
@@ -33,7 +31,6 @@ public class BasePage {
     }
 
     public boolean presenceOfWebElement(By element){
-
         return (ExpectedConditions.presenceOfElementLocated(element)!=null);
     }
 

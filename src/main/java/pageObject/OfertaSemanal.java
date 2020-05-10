@@ -7,23 +7,23 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Reporter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class OfertaSemanal extends BasePage {
 
     @FindBy(how = How.CSS, using = "span[class='price__symbol']")
-    WebElement priceCurrency;
+    private WebElement priceCurrency;
 
     @FindBy(how = How.CSS, using = "span[class='price__fraction']")
-    WebElement priceFraction;
+    private WebElement priceFraction;
 
     @FindBy(how = How.CSS, using = "span[class='price__decimals']")
-    WebElement priceDecimal;
+    private WebElement priceDecimal;
 
     @FindBy(how = How.CSS, using = "span.main-title")
-    WebElement nombreItem;
-
+    private WebElement nombreItem;
 
     public OfertaSemanal(WebDriver driver) {
         super(driver, new By.ByCssSelector("#MLU467539014"));
@@ -34,31 +34,19 @@ public class OfertaSemanal extends BasePage {
         return new PaginaProducto(getDriver());
     }
 
+
     public List<String> getProductInfo() {
-        Reporter.log("Oferta Semanal: ");
+        Reporter.log("Oferta Semanal: ", true);
+        Reporter.log(nombreItem.getText(), true);
+        Reporter.log(priceCurrency.getText(), true);
+        Reporter.log(priceFraction.getText(), true);
 
-        List<String> infoProductoSemanal = null;
-
-        Reporter.log(nombreItem.getText());
-        Reporter.log(priceCurrency.getText());
-        Reporter.log(priceFraction.getText());
-
+        List<String> infoProductoSemanal = new ArrayList<>();
         infoProductoSemanal.add(nombreItem.getText());
         infoProductoSemanal.add(priceCurrency.getText());
         infoProductoSemanal.add(priceFraction.getText());
 
         return infoProductoSemanal;
     }
-//    public String getPriceFraction() {
-//        Reporter.log(priceFraction.getText());
-//        return priceFraction.getText();
-//    }
-////    public String getPriceDecimal() {
-////        Reporter.log(priceDecimal.getText());
-////        return priceDecimal.getText();
-////    }
-//    public String getNombreItem() {
-//        Reporter.log(nombreItem.getText());
-//        return nombreItem.getText();
-//    }
+
 }

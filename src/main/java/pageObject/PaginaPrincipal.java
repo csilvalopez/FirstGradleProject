@@ -17,10 +17,8 @@ public class PaginaPrincipal extends BasePage {
     }
 
     public OfertaSemanal getOfertaSemanalPage (){
-
         JavascriptExecutor executor = (JavascriptExecutor)getDriver();
         executor.executeScript("arguments[0].click();", ofertasSemanales);
-
         return new OfertaSemanal(getDriver());
     }
 
